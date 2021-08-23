@@ -9,6 +9,18 @@ docker-compose down  остановить
 
 *-d* в демоне
 
+зайти в контейнер Mysql
+
+```
+docker exec -it docker_mysql_1 bash
+```
+
+Создать базу данных (если не запускался раньше)
+
+```
+RUN mysql -h "localhost" -u "root" "-p2t9k51hP" < "/mysql/scripts/create_db.sql"
+```
+
 зайти в контейнер Laravel
 
 ```
@@ -19,6 +31,12 @@ docker exec -it php bash
 
 ```
 php composer.phar update
+```
+
+Запустить миграции (если не запускался раньше)
+
+```
+php artisan migrate:fresh --seed
 ```
 
 Запустить необработанные призы (если по какой-то причине они не обработались в очереди)
@@ -51,24 +69,6 @@ npm install
 
 ```
 npm run dev
-```
-
-зайти в контейнер Mysql
-
-```
-docker exec -it docker_mysql_1 bash
-```
-
-Создать базу данных (если не запускался раньше)
-
-```
-RUN mysql -h "localhost" -u "root" "-p2t9k51hP" < "/mysql/scripts/create_db.sql"
-```
-
-Запустить миграции (если не запускался раньше)
-
-```
-php artisan migrate:fresh --seed
 ```
 
 Просмотреть запущеные
