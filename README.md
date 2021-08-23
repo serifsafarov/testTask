@@ -33,6 +33,12 @@ docker exec -it php bash
 php composer.phar update
 ```
 
+Очистить кеш приложения (если не запускался раньше)
+
+```
+php artisan config:cache
+```
+
 Запустить миграции (если не запускался раньше)
 
 ```
