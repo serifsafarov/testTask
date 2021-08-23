@@ -12,7 +12,7 @@ docker-compose down  остановить
 зайти в контейнер Mysql
 
 ```
-docker exec -it docker_mysql_1 bash
+docker exec -it mysql bash
 ```
 
 Создать базу данных (если не запускался раньше)
