@@ -18,7 +18,7 @@ docker exec -it mysql bash
 Создать базу данных (если не запускался раньше)
 
 ```
-RUN mysql -h "localhost" -u "root" "-p2t9k51hP" < "/mysql/scripts/create_db.sql"
+mysql -h "localhost" -u "root" "-p2t9k51hP" < "/mysql/scripts/create_db.sql"
 ```
 
 зайти в контейнер Laravel
