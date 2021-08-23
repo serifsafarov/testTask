@@ -1,5 +1,7 @@
 
 ```
+cd docker // переходим в директорию docker
+
 docker-compose build   собрать
 
 docker-compose up  запустить  // docker-compose up  -d  запуск в демоне
